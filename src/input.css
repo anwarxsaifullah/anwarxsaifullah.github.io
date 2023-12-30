@@ -7,11 +7,11 @@ body {
 }
 
 .navbar-fixed {
-  @apply fixed z-[999999] bg-white bg-opacity-80 backdrop-blur-sm;
+  @apply fixed z-[999999] bg-white dark:bg-transparent bg-opacity-80 backdrop-blur-sm;
 }
 
 .hamburger-line {
-  @apply w-[30px] h-[2px] my-2 block bg-dark;
+  @apply w-[30px] h-[2px] my-2 block dark:bg-white bg-dark;
 }
 
 .hamburger-active>span:nth-child(1) {
@@ -27,5 +27,17 @@ body {
 }
 
 #dark-toggle:checked ~ label div.toggle-circle {
-  @apply translate-x-3;
+  @apply translate-x-3 ;
+}
+
+header  li>a, span, h2, h3 {
+  @apply dark:text-white;
+}
+
+input, textarea {
+  @apply dark:bg-slate-700 dark:text-white;
+}
+
+#portfolio p {
+  @apply dark:text-slate-400;
 }

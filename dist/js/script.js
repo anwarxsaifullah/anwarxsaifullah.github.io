@@ -40,5 +40,11 @@ const darkToggle = document.querySelector('#dark-toggle');
 const html = document.querySelector('html');
 
 darkToggle.addEventListener('click', function () {
-  html.classList.toggle('dark');
+  if(darkToggle.checked){
+    html.classList.add('dark');
+    localStorage.theme = 'dark'
+  } else {
+    html.classList.remove('dark');
+    localStorage.theme = 'light'
+  }
 })
